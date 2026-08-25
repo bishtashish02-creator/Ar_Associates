@@ -33,9 +33,8 @@ header{position:sticky;top:0;z-index:1000;background:rgba(7,21,34,.96);backdrop-
 .btn-outline:hover{background:var(--gold);color:#071522}
 .menu{display:none;color:#fff;font-size:28px;background:none;border:0}
 .hero{background:
-linear-gradient(90deg,rgba(7,21,34,.98),rgba(7,21,34,.84) 58%,rgba(7,21,34,.92)),
-radial-gradient(circle at 80% 20%,rgba(201,166,107,.2),transparent 35%),
-#071522;color:#fff;padding:110px 0 95px;position:relative;overflow:hidden}
+linear-gradient(90deg,rgba(7,21,34,.97) 0%,rgba(7,21,34,.88) 45%,rgba(7,21,34,.38) 100%),
+url("hero-finance.png") center/cover no-repeat;color:#fff;padding:110px 0 95px;position:relative;overflow:hidden}
 .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(201,166,107,.16);border-radius:50%;right:-140px;top:-120px}
 .eyebrow{color:var(--gold2);letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:18px}
 .hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,6vw,78px);font-weight:500;line-height:1.04;max-width:800px;margin-bottom:25px}
@@ -75,7 +74,7 @@ h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,52px);li
 .step strong{font-family:Georgia,serif;color:var(--gold);font-size:28px}.step h3{font-family:Georgia,serif;font-size:23px;color:var(--navy);margin:14px 0 8px}.step p{color:#68737b;font-size:14px}
 .team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .person{border:1px solid #e5ddd0;padding:28px;background:#fff}
-.avatar{height:190px;background:linear-gradient(135deg,#e8e0d2,#c9a66b);display:grid;place-items:center;color:#fff;font-family:Georgia,serif;font-size:52px;margin-bottom:22px}
+.avatar{height:250px;overflow:hidden;background:#e8e0d2;margin-bottom:22px;border-bottom:3px solid var(--gold)}.avatar img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .35s ease}.person:hover .avatar img{transform:scale(1.04)}
 .person h3{font-family:Georgia,serif;font-size:23px;color:var(--navy)}.person .role{font-size:12px;letter-spacing:1px;color:#9a773e;text-transform:uppercase;font-weight:800}.person p{font-size:13px;color:#69737a;margin-top:10px}
 .testimonials{background:var(--cream)}
 .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -134,10 +133,10 @@ footer{background:#04101a;color:#b7c2c9;padding:55px 0 20px}.footer-grid{display
 </section>
 
 <div class="trust-strip"><div class="container stats">
-  <div class="stat"><b>XX+</b><span>Clients Served</span></div>
-  <div class="stat"><b>XX+</b><span>Years of Experience</span></div>
-  <div class="stat"><b>XX+</b><span>Returns & Filings</span></div>
-  <div class="stat"><b>XX+</b><span>Businesses Supported</span></div>
+  <div class="stat"><b>165+</b><span>Clients Served</span></div>
+  <div class="stat"><b>6+</b><span>Years of Experience</span></div>
+  <div class="stat"><b>95+</b><span>Returns & Filings</span></div>
+  <div class="stat"><b>55+</b><span>Businesses Supported</span></div>
 </div></div>
 
 <section id="about"><div class="container about-grid reveal">
@@ -184,10 +183,10 @@ footer{background:#04101a;color:#b7c2c9;padding:55px 0 20px}.footer-grid{display
 <section id="team" class="services"><div class="container">
   <div class="section-head center reveal"><div class="eyebrow">Founding Team</div><h2>Four Professionals. One Shared Vision.</h2><p class="lead">A multidisciplinary founding team with complementary knowledge across business, accounting, taxation and compliance.</p></div>
   <div class="team">
-    <article class="person reveal"><div class="avatar">AB</div><h3>Ashish Bisht</h3><div class="role">Founder · MBA</div><p>Business and management perspective focused on client requirements and structured professional solutions.</p></article>
-    <article class="person reveal"><div class="avatar">RB</div><h3>Rishabh Bisht</h3><div class="role">Founder · B.Com</div><p>Commerce and accounting foundation with a focus on organised financial records and compliance.</p></article>
-    <article class="person reveal"><div class="avatar">H</div><h3>Harvinder</h3><div class="role">Founder · ACCA</div><p>Accounting perspective with focus on accounting, financial reporting, audit and compliance.</p></article>
-    <article class="person reveal"><div class="avatar">P</div><h3>Priyanshu</h3><div class="role">Founder · MBA</div><p>Business-oriented approach focused on practical compliance solutions and client support.</p></article>
+    <article class="person reveal"><div class="avatar"><img src="Ashish-Bisht.jpeg" alt="Ashish Bisht, Founder"></div><h3>Ashish Bisht</h3><div class="role">Founder · MBA</div><p>Business and management perspective focused on client requirements and structured professional solutions.</p></article>
+    <article class="person reveal"><div class="avatar"><img src="Rishabh-Bisht.jpeg" alt="Rishabh Bisht, Founder"></div><h3>Rishabh Bisht</h3><div class="role">Founder · B.Com</div><p>Commerce and accounting foundation with a focus on organised financial records and compliance.</p></article>
+    <article class="person reveal"><div class="avatar"><img src="Harvinder.jpeg" alt="Harvinder, Founder"></div><h3>Harvinder</h3><div class="role">Founder · ACCA</div><p>Accounting perspective with focus on accounting, financial reporting, audit and compliance.</p></article>
+    <article class="person reveal"><div class="avatar"><img src="Priyanshu.jpeg" alt="Priyanshu, Founder"></div><h3>Priyanshu</h3><div class="role">Founder · MBA</div><p>Business-oriented approach focused on practical compliance solutions and client support.</p></article>
   </div>
 </div></section>
 
@@ -212,39 +211,4 @@ footer{background:#04101a;color:#b7c2c9;padding:55px 0 20px}.footer-grid{display
   <form id="enquiryForm" class="reveal">
     <div><label>FULL NAME</label><input required type="text" placeholder="Enter your full name"></div>
     <div><label>EMAIL ADDRESS</label><input required type="email" placeholder="Enter your email"></div>
-    <div><label>MOBILE NUMBER</label><input required type="tel" placeholder="Enter your mobile number"></div>
-    <div><label>SERVICE REQUIRED</label><select required><option value="">Select a service</option><option>GST Registration</option><option>GST Return Filing</option><option>Income Tax / ITR</option><option>Audit</option><option>Accounting & Bookkeeping</option><option>PF & ESI Compliance</option><option>Other Compliance</option></select></div>
-    <div class="full"><label>YOUR REQUIREMENT</label><textarea placeholder="Tell us briefly about your requirement"></textarea></div>
-    <div class="full"><button class="btn btn-gold" type="submit">Submit Enquiry</button></div>
-  </form>
-</div></section>
-</main>
-
-<footer>
-<div class="container">
-  <div class="footer-grid">
-    <div><div class="footer-title">AR ASSOCIATE</div><p>Tax · GST · Accounting · Audit · PF & ESI · Compliance</p><p style="margin-top:15px">Professional expertise. Reliable service. Long-term trust.</p></div>
-    <div><div class="footer-title">Quick Links</div><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#approach">Our Approach</a><a href="#team">Founding Team</a><a href="#contact">Contact</a></div>
-    <div><div class="footer-title">Services</div><a href="#services">GST Registration</a><a href="#services">GST Return Filing</a><a href="#services">Income Tax & ITR</a><a href="#services">Audit</a><a href="#services">Accounting</a><a href="#services">PF & ESI</a></div>
-    <div><div class="footer-title">Contact</div><p><a href="mailto:arassociates042025@gmail.com">arassociates042025@gmail.com</a></p><p style="margin-top:10px">RC-152, Prakash Nagar, Khora Colony,<br>Gzb, UP - 201309</p><p style="margin-top:10px">Mon – Sat · 10:00 AM – 6:00 PM</p></div>
-  </div>
-  <div class="copyright"><span>© 2026 AR ASSOCIATE. All Rights Reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms & Conditions</a> · <a href="#">Disclaimer</a></span></div>
-</div>
-</footer>
-
-<script>
-function toggleMenu(){
-  const nav=document.querySelector('.nav-links');
-  nav.style.display=nav.style.display==='flex'?'none':'flex';
-  nav.style.position='absolute';nav.style.top='78px';nav.style.left='0';nav.style.right='0';
-  nav.style.background='#071522';nav.style.padding='22px';nav.style.flexDirection='column';nav.style.alignItems='flex-start';
-}
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.getElementById('enquiryForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  alert('Thank you. Your enquiry form is ready to be connected to your business email.');
-});
-</script>
-</body>
-</html>
+    <div><label>MOBILE NUMBER</label><input required type="tel" placeholder="Ent

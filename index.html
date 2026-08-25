@@ -5,245 +5,1527 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="AR ASSOCIATE - Professional Tax, GST, Accounting, Audit, PF & ESI Compliance Services.">
 <title>AR ASSOCIATE | Tax, GST, Accounting & Compliance</title>
+
 <style>
 :root{
-  --navy:#071522; --navy2:#0d2232; --gold:#c9a66b; --gold2:#e0c58f;
-  --cream:#f7f3eb; --white:#fff; --muted:#aab7c2; --ink:#18232d;
-  --line:rgba(201,166,107,.28); --shadow:0 24px 70px rgba(7,21,34,.16);
+  --navy:#071522;
+  --navy2:#0d2232;
+  --gold:#c9a66b;
+  --gold2:#e0c58f;
+  --cream:#f7f3eb;
+  --white:#fff;
+  --muted:#aab7c2;
+  --ink:#18232d;
+  --line:rgba(201,166,107,.28);
+  --shadow:0 24px 70px rgba(7,21,34,.16);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:auto}
-.topbar{background:#04101a;color:#dce5eb;font-size:13px;padding:9px 0}
-.topbar .container{display:flex;justify-content:space-between;gap:20px}
-header{position:sticky;top:0;z-index:1000;background:rgba(7,21,34,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:12px;color:#fff}
-.logo-mark{width:42px;height:42px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:19px}
-.logo strong{font-family:Georgia,serif;letter-spacing:1.5px;font-size:20px}
-.logo span{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);margin-top:-2px}
-.nav-links{display:flex;align-items:center;gap:27px;color:#dbe4ea;font-size:14px}
-.nav-links a:hover{color:var(--gold2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid var(--gold);font-weight:700;font-size:13px;letter-spacing:.4px;transition:.25s}
-.btn-gold{background:var(--gold);color:#071522}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
-.btn-outline{color:#fff}
-.btn-outline:hover{background:var(--gold);color:#071522}
-.menu{display:none;color:#fff;font-size:28px;background:none;border:0}
-.hero{background:
-linear-gradient(90deg,rgba(7,21,34,.97) 0%,rgba(7,21,34,.88) 45%,rgba(7,21,34,.38) 100%),
-url("hero-finance.png") center/cover no-repeat;color:#fff;padding:110px 0 95px;position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(201,166,107,.16);border-radius:50%;right:-140px;top:-120px}
-.eyebrow{color:var(--gold2);letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:18px}
-.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,6vw,78px);font-weight:500;line-height:1.04;max-width:800px;margin-bottom:25px}
-.hero h1 em{color:var(--gold2);font-style:normal}
-.hero p{color:#c6d0d7;max-width:670px;font-size:18px;margin-bottom:32px}
-.actions{display:flex;gap:13px;flex-wrap:wrap}
-.trust-strip{background:var(--cream);border-bottom:1px solid #e7dfd2}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);padding:35px 0}
-.stat{padding:5px 30px;border-right:1px solid #ded4c4}
-.stat:last-child{border:0}.stat b{display:block;font-family:Georgia,serif;font-size:35px;color:var(--navy);font-weight:500}.stat span{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#68727b}
-section{padding:100px 0}
-.section-head{max-width:760px;margin-bottom:48px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.section-head .eyebrow{color:#9d7b40}
-h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,52px);line-height:1.12;font-weight:500;color:var(--navy);margin-bottom:18px}
-.lead{color:#5f6b73;font-size:17px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.about-card{background:var(--navy);color:#fff;padding:55px;position:relative;min-height:380px}
-.about-card:before{content:"AR";font-family:Georgia,serif;font-size:150px;color:rgba(201,166,107,.08);position:absolute;right:25px;bottom:0}
-.about-card h3{font-family:Georgia,serif;font-size:34px;font-weight:500;margin-bottom:20px}
-.about-card p{color:#c5d0d7;position:relative;z-index:1}
-.services{background:var(--cream)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;padding:34px;border:1px solid #e6ded1;transition:.3s;min-height:245px}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold)}
-.num{font-family:Georgia,serif;color:var(--gold);font-size:14px;letter-spacing:2px}
-.card h3{font-family:Georgia,serif;font-size:25px;font-weight:500;color:var(--navy);margin:22px 0 10px}
-.card p{font-size:14px;color:#657078}
-.card a{display:inline-block;margin-top:18px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#96733d}
-.dark{background:var(--navy);color:#fff}
-.dark h2{color:#fff}.dark .lead{color:#b9c5cc}.dark .eyebrow{color:var(--gold2)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.why{border:1px solid rgba(201,166,107,.24);padding:28px;background:rgba(255,255,255,.025)}
-.why b{font-family:Georgia,serif;color:#fff;font-size:20px}.why p{color:#aebbc3;font-size:14px;margin-top:8px}
-.process{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.step{padding:32px;border-top:1px solid var(--gold);background:#fbfaf7}
-.step strong{font-family:Georgia,serif;color:var(--gold);font-size:28px}.step h3{font-family:Georgia,serif;font-size:23px;color:var(--navy);margin:14px 0 8px}.step p{color:#68737b;font-size:14px}
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.person{border:1px solid #e5ddd0;padding:28px;background:#fff}
-.avatar{height:250px;overflow:hidden;background:#e8e0d2;margin-bottom:22px;border-bottom:3px solid var(--gold)}.avatar img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .35s ease}.person:hover .avatar img{transform:scale(1.04)}
-.person h3{font-family:Georgia,serif;font-size:23px;color:var(--navy)}.person .role{font-size:12px;letter-spacing:1px;color:#9a773e;text-transform:uppercase;font-weight:800}.person p{font-size:13px;color:#69737a;margin-top:10px}
-.testimonials{background:var(--cream)}
-.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.quote{background:#fff;padding:35px;border:1px solid #e4dccf}
-.stars{color:#b08a4e;letter-spacing:4px}.quote blockquote{font-family:Georgia,serif;font-size:19px;line-height:1.55;color:#24313b;margin:18px 0}.quote small{color:#717a81}
-.contact{background:var(--navy);color:#fff}
-.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
-.contact h2{color:#fff}.contact .lead{color:#b9c5cc}
-.contact-info{margin-top:30px}.contact-info div{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}.contact-info span{display:block;color:var(--gold2);font-size:11px;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px}
-form{background:#fff;padding:36px;color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:17px}
-form .full{grid-column:1/-1}label{font-size:12px;font-weight:800;color:#4f5a62;display:block;margin-bottom:7px}input,select,textarea{width:100%;border:1px solid #d9d4cc;padding:13px 14px;font:inherit;outline:none;background:#fff}textarea{min-height:125px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--gold)}form .btn{border:0;cursor:pointer}
-footer{background:#04101a;color:#b7c2c9;padding:55px 0 20px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}.footer-title{color:#fff;font-family:Georgia,serif;font-size:18px;margin-bottom:15px}.footer p,.footer a{font-size:13px}.footer a{display:block;margin:7px 0}.footer a:hover{color:var(--gold2)}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;font-size:12px}.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color:var(--ink);
+  line-height:1.65;
+  background:#fff;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+.topbar{
+  background:#04101a;
+  color:#dce5eb;
+  font-size:13px;
+  padding:9px 0;
+}
+
+.topbar .container{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,21,34,.96);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+}
+
+.logo-mark{
+  width:42px;
+  height:42px;
+  border:1px solid var(--gold);
+  display:grid;
+  place-items:center;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:19px;
+}
+
+.logo strong{
+  font-family:Georgia,serif;
+  letter-spacing:1.5px;
+  font-size:20px;
+}
+
+.logo span{
+  display:block;
+  font-size:9px;
+  letter-spacing:3px;
+  color:var(--muted);
+  margin-top:-2px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:27px;
+  color:#dbe4ea;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 22px;
+  border:1px solid var(--gold);
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.4px;
+  transition:.25s;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:#071522;
+}
+
+.btn-gold:hover{
+  background:var(--gold2);
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  color:#fff;
+}
+
+.btn-outline:hover{
+  background:var(--gold);
+  color:#071522;
+}
+
+.menu{
+  display:none;
+  color:#fff;
+  font-size:28px;
+  background:none;
+  border:0;
+}
+
+/* HERO IMAGE */
+
+.hero{
+  background:
+  linear-gradient(
+    90deg,
+    rgba(7,21,34,.97) 0%,
+    rgba(7,21,34,.88) 45%,
+    rgba(7,21,34,.38) 100%
+  ),
+  url("hero-finance.png") center/cover no-repeat;
+
+  color:#fff;
+  padding:110px 0 95px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:430px;
+  height:430px;
+  border:1px solid rgba(201,166,107,.16);
+  border-radius:50%;
+  right:-140px;
+  top:-120px;
+}
+
+.eyebrow{
+  color:var(--gold2);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(44px,6vw,78px);
+  font-weight:500;
+  line-height:1.04;
+  max-width:800px;
+  margin-bottom:25px;
+}
+
+.hero h1 em{
+  color:var(--gold2);
+  font-style:normal;
+}
+
+.hero p{
+  color:#c6d0d7;
+  max-width:670px;
+  font-size:18px;
+  margin-bottom:32px;
+}
+
+.actions{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+/* STATS */
+
+.trust-strip{
+  background:var(--cream);
+  border-bottom:1px solid #e7dfd2;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:35px 0;
+}
+
+.stat{
+  padding:5px 30px;
+  border-right:1px solid #ded4c4;
+}
+
+.stat:last-child{
+  border:0;
+}
+
+.stat b{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:35px;
+  color:var(--navy);
+  font-weight:500;
+}
+
+.stat span{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  color:#68727b;
+}
+
+/* GENERAL */
+
+section{
+  padding:100px 0;
+}
+
+.section-head{
+  max-width:760px;
+  margin-bottom:48px;
+}
+
+.section-head.center{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.section-head .eyebrow{
+  color:#9d7b40;
+}
+
+h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,4vw,52px);
+  line-height:1.12;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:18px;
+}
+
+.lead{
+  color:#5f6b73;
+  font-size:17px;
+}
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about-card{
+  background:var(--navy);
+  color:#fff;
+  padding:55px;
+  position:relative;
+  min-height:380px;
+}
+
+.about-card:before{
+  content:"AR";
+  font-family:Georgia,serif;
+  font-size:150px;
+  color:rgba(201,166,107,.08);
+  position:absolute;
+  right:25px;
+  bottom:0;
+}
+
+.about-card h3{
+  font-family:Georgia,serif;
+  font-size:34px;
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.about-card p{
+  color:#c5d0d7;
+  position:relative;
+  z-index:1;
+}
+
+/* SERVICES */
+
+.services{
+  background:var(--cream);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  padding:34px;
+  border:1px solid #e6ded1;
+  transition:.3s;
+  min-height:245px;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+  border-color:var(--gold);
+}
+
+.num{
+  font-family:Georgia,serif;
+  color:var(--gold);
+  font-size:14px;
+  letter-spacing:2px;
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:25px;
+  font-weight:500;
+  color:var(--navy);
+  margin:22px 0 10px;
+}
+
+.card p{
+  font-size:14px;
+  color:#657078;
+}
+
+.card a{
+  display:inline-block;
+  margin-top:18px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#96733d;
+}
+
+/* WHY CHOOSE */
+
+.dark{
+  background:var(--navy);
+  color:#fff;
+}
+
+.dark h2{
+  color:#fff;
+}
+
+.dark .lead{
+  color:#b9c5cc;
+}
+
+.dark .eyebrow{
+  color:var(--gold2);
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.why{
+  border:1px solid rgba(201,166,107,.24);
+  padding:28px;
+  background:rgba(255,255,255,.025);
+}
+
+.why b{
+  font-family:Georgia,serif;
+  color:#fff;
+  font-size:20px;
+}
+
+.why p{
+  color:#aebbc3;
+  font-size:14px;
+  margin-top:8px;
+}
+
+/* APPROACH */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.step{
+  padding:32px;
+  border-top:1px solid var(--gold);
+  background:#fbfaf7;
+}
+
+.step strong{
+  font-family:Georgia,serif;
+  color:var(--gold);
+  font-size:28px;
+}
+
+.step h3{
+  font-family:Georgia,serif;
+  font-size:23px;
+  color:var(--navy);
+  margin:14px 0 8px;
+}
+
+.step p{
+  color:#68737b;
+  font-size:14px;
+}
+
+/* TEAM */
+
+.team{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.person{
+  border:1px solid #e5ddd0;
+  padding:28px;
+  background:#fff;
+}
+
+.avatar{
+  height:250px;
+  overflow:hidden;
+  background:#e8e0d2;
+  margin-bottom:22px;
+  border-bottom:3px solid var(--gold);
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  transition:transform .35s ease;
+}
+
+.person:hover .avatar img{
+  transform:scale(1.04);
+}
+
+.person h3{
+  font-family:Georgia,serif;
+  font-size:23px;
+  color:var(--navy);
+}
+
+.person .role{
+  font-size:12px;
+  letter-spacing:1px;
+  color:#9a773e;
+  text-transform:uppercase;
+  font-weight:800;
+}
+
+.person p{
+  font-size:13px;
+  color:#69737a;
+  margin-top:10px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+  background:var(--cream);
+}
+
+.quote-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.quote{
+  background:#fff;
+  padding:35px;
+  border:1px solid #e4dccf;
+}
+
+.stars{
+  color:#b08a4e;
+  letter-spacing:4px;
+}
+
+.quote blockquote{
+  font-family:Georgia,serif;
+  font-size:19px;
+  line-height:1.55;
+  color:#24313b;
+  margin:18px 0;
+}
+
+.quote small{
+  color:#717a81;
+}
+
+/* CONTACT */
+
+.contact{
+  background:var(--navy);
+  color:#fff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:70px;
+  align-items:start;
+}
+
+.contact h2{
+  color:#fff;
+}
+
+.contact .lead{
+  color:#b9c5cc;
+}
+
+.contact-info{
+  margin-top:30px;
+}
+
+.contact-info div{
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.contact-info span{
+  display:block;
+  color:var(--gold2);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:4px;
+}
+
+form{
+  background:#fff;
+  padding:36px;
+  color:var(--ink);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
+form .full{
+  grid-column:1/-1;
+}
+
+label{
+  font-size:12px;
+  font-weight:800;
+  color:#4f5a62;
+  display:block;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid #d9d4cc;
+  padding:13px 14px;
+  font:inherit;
+  outline:none;
+  background:#fff;
+}
+
+textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--gold);
+}
+
+form .btn{
+  border:0;
+  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  background:#04101a;
+  color:#b7c2c9;
+  padding:55px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-title{
+  color:#fff;
+  font-family:Georgia,serif;
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+  font-size:13px;
+}
+
+.footer a{
+  display:block;
+  margin:7px 0;
+}
+
+.footer a:hover{
+  color:var(--gold2);
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:40px;
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  font-size:12px;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:.7s;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+/* TABLET */
+
 @media(max-width:900px){
- .nav-links{display:none}.menu{display:block}.topbar{display:none}
- .stats{grid-template-columns:1fr 1fr}.stat{margin:10px 0}
- .about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
- .cards,.quote-grid{grid-template-columns:1fr 1fr}
- .team{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}
- .footer-grid{grid-template-columns:1fr 1fr}
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .topbar{
+    display:none;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    margin:10px 0;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .cards,
+  .quote-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .team{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
 }
+
+/* MOBILE */
+
 @media(max-width:620px){
- section{padding:70px 0}.hero{padding:80px 0 70px}.hero p{font-size:16px}
- .stats,.cards,.quote-grid,.team,.process,.why-grid,.footer-grid{grid-template-columns:1fr}
- .stat{border-right:0;border-bottom:1px solid #ded4c4;padding:18px 0}.stat:last-child{border:0}
- .about-card{padding:35px;min-height:300px}
- form{grid-template-columns:1fr;padding:25px}.copyright{flex-direction:column}
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero{
+    padding:80px 0 70px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .stats,
+  .cards,
+  .quote-grid,
+  .team,
+  .process,
+  .why-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stat{
+    border-right:0;
+    border-bottom:1px solid #ded4c4;
+    padding:18px 0;
+  }
+
+  .stat:last-child{
+    border:0;
+  }
+
+  .about-card{
+    padding:35px;
+    min-height:300px;
+  }
+
+  form{
+    grid-template-columns:1fr;
+    padding:25px;
+  }
+
+  .copyright{
+    flex-direction:column;
+  }
 }
+
 </style>
 </head>
+
 <body>
 
-<div class="topbar"><div class="container"><span>Professional Tax, GST, Accounting & Compliance Services</span><span>Monday – Saturday · 10:00 AM – 6:00 PM</span></div></div>
+<div class="topbar">
+  <div class="container">
+    <span>Professional Tax, GST, Accounting & Compliance Services</span>
+    <span>Monday – Saturday · 10:00 AM – 6:00 PM</span>
+  </div>
+</div>
 
 <header>
 <nav class="container nav">
-  <a href="#home" class="logo">
-    <div class="logo-mark">AR</div>
-    <div><strong>AR ASSOCIATE</strong><span>TAX · GST · ACCOUNTING · COMPLIANCE</span></div>
-  </a>
-  <div class="nav-links">
-    <a href="#about">About</a><a href="#services">Services</a><a href="#approach">Approach</a><a href="#team">Team</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
-    <a class="btn btn-gold" href="#contact">Book Consultation</a>
+
+<a href="#home" class="logo">
+  <div class="logo-mark">AR</div>
+  <div>
+    <strong>AR ASSOCIATE</strong>
+    <span>TAX · GST · ACCOUNTING · COMPLIANCE</span>
   </div>
-  <button class="menu" onclick="toggleMenu()">☰</button>
+</a>
+
+<div class="nav-links">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#approach">Approach</a>
+  <a href="#team">Team</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-gold" href="#contact">Book Consultation</a>
+</div>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
 </nav>
 </header>
 
 <main>
+
+<!-- HERO -->
+
 <section class="hero" id="home">
+
 <div class="container">
-  <div class="eyebrow">Professional Tax & Compliance Advisory</div>
-  <h1>Your Trusted Partner in <em>Tax, GST, Accounting & Compliance</em></h1>
-  <p>AR ASSOCIATE helps individuals, professionals and businesses manage taxation, accounting and statutory compliance with confidence — through accurate, timely and practical professional support.</p>
-  <div class="actions"><a class="btn btn-gold" href="#contact">Book a Consultation</a><a class="btn btn-outline" href="#services">Explore Our Services</a></div>
+
+<div class="eyebrow">
+Professional Tax & Compliance Advisory
 </div>
+
+<h1>
+Your Trusted Partner in
+<em>Tax, GST, Accounting & Compliance</em>
+</h1>
+
+<p>
+AR ASSOCIATE helps individuals, professionals and businesses manage taxation,
+accounting and statutory compliance with confidence — through accurate,
+timely and practical professional support.
+</p>
+
+<div class="actions">
+<a class="btn btn-gold" href="#contact">Book a Consultation</a>
+<a class="btn btn-outline" href="#services">Explore Our Services</a>
+</div>
+
+</div>
+
 </section>
 
-<div class="trust-strip"><div class="container stats">
-  <div class="stat"><b>165+</b><span>Clients Served</span></div>
-  <div class="stat"><b>6+</b><span>Years of Experience</span></div>
-  <div class="stat"><b>95+</b><span>Returns & Filings</span></div>
-  <div class="stat"><b>55+</b><span>Businesses Supported</span></div>
-</div></div>
+<!-- STATS -->
 
-<section id="about"><div class="container about-grid reveal">
-  <div><div class="eyebrow">About AR ASSOCIATE</div><h2>Simplifying Tax & Compliance for Your Business</h2><p class="lead">AR ASSOCIATE is a professional tax, accounting and compliance firm providing comprehensive services in GST, Income Tax, Audit, Accounting, PF & ESI compliance.</p><p style="margin-top:20px;color:#69737a">We support individuals and businesses with accurate, timely and practical solutions designed to simplify their statutory and financial responsibilities. From GST registration and return filing to ITR, audit, accounting, PF and ESI compliance, our team helps you stay organised and compliant — so you can focus on what matters most: your business.</p><div style="margin-top:28px"><a class="btn btn-gold" style="color:#071522" href="#services">Know More About Us</a></div></div>
-  <div class="about-card"><div class="eyebrow">Our Commitment</div><h3>Professional expertise. Reliable service. Long-term trust.</h3><p>We aim to become a dependable professional partner for every client by combining attention to detail, structured processes and personalised support.</p></div>
-</div></section>
+<div class="trust-strip">
 
-<section class="services" id="services"><div class="container">
-  <div class="section-head center reveal"><div class="eyebrow">Our Services</div><h2>Complete Tax, Accounting & Compliance Solutions</h2><p class="lead">Professional and dependable support for your essential financial and statutory requirements.</p></div>
-  <div class="cards">
-    <article class="card reveal"><div class="num">01</div><h3>GST Services</h3><p>GST Registration, return filing, compliance, documentation and advisory support.</p><a href="#contact">Enquire Now →</a></article>
-    <article class="card reveal"><div class="num">02</div><h3>Income Tax</h3><p>ITR filing, tax computation, tax compliance and professional assistance.</p><a href="#contact">Enquire Now →</a></article>
-    <article class="card reveal"><div class="num">03</div><h3>Audit Services</h3><p>Audit, financial review, documentation and compliance support.</p><a href="#contact">Enquire Now →</a></article>
-    <article class="card reveal"><div class="num">04</div><h3>Accounting</h3><p>Bookkeeping, accounts maintenance, reconciliation and financial reporting.</p><a href="#contact">Enquire Now →</a></article>
-    <article class="card reveal"><div class="num">05</div><h3>PF & ESI</h3><p>Registration and ongoing employee-related statutory compliance support.</p><a href="#contact">Enquire Now →</a></article>
-    <article class="card reveal"><div class="num">06</div><h3>Compliance</h3><p>End-to-end support for recurring tax, accounting and statutory obligations.</p><a href="#contact">Enquire Now →</a></article>
-  </div>
-</div></section>
+<div class="container stats">
 
-<section class="dark"><div class="container reveal">
-  <div class="section-head"><div class="eyebrow">Why Choose AR ASSOCIATE?</div><h2>Expertise You Can Rely On. Service You Can Trust.</h2><p class="lead">We combine professional knowledge with a personalised approach to make your compliance journey simpler, more organised and more reliable.</p></div>
-  <div class="why-grid">
-    <div class="why"><b>01 · Professional Expertise</b><p>Professional support across taxation, GST, accounting, audit and statutory compliance.</p></div>
-    <div class="why"><b>02 · Accuracy & Attention to Detail</b><p>Careful focus on accurate records, documentation and compliance work.</p></div>
-    <div class="why"><b>03 · Timely Compliance</b><p>A structured approach designed to help you stay organised and meet important deadlines.</p></div>
-    <div class="why"><b>04 · Personalised Solutions</b><p>Solutions aligned with your specific requirements and business needs.</p></div>
-    <div class="why"><b>05 · Complete Compliance Support</b><p>GST, Income Tax, accounting, audit, PF and ESI under one professional roof.</p></div>
-    <div class="why"><b>06 · Confidential & Reliable</b><p>Your financial and business information is handled with professionalism and discretion.</p></div>
-  </div>
-</div></section>
+<div class="stat">
+<b>165+</b>
+<span>Clients Served</span>
+</div>
 
-<section id="approach"><div class="container">
-  <div class="section-head center reveal"><div class="eyebrow">Our Professional Approach</div><h2>A Structured Approach to Every Client</h2><p class="lead">Our process is built around clarity, accuracy, timely action and long-term professional relationships.</p></div>
-  <div class="process">
-    <div class="step reveal"><strong>01</strong><h3>Understand</h3><p>We understand your business, financial position and specific compliance requirements.</p></div>
-    <div class="step reveal"><strong>02</strong><h3>Analyse</h3><p>We review relevant information and documentation to identify requirements and potential issues.</p></div>
-    <div class="step reveal"><strong>03</strong><h3>Plan</h3><p>We establish a clear and organised approach for the work involved.</p></div>
-    <div class="step reveal"><strong>04</strong><h3>Execute</h3><p>We handle required accounting, documentation and filing processes with attention to detail.</p></div>
-    <div class="step reveal"><strong>05</strong><h3>Review</h3><p>We review relevant information and documentation to maintain accuracy and consistency.</p></div>
-    <div class="step reveal"><strong>06</strong><h3>Support</h3><p>We remain available for ongoing professional support beyond a single filing or compliance activity.</p></div>
-  </div>
-</div></section>
+<div class="stat">
+<b>6+</b>
+<span>Years of Experience</span>
+</div>
 
-<section id="team" class="services"><div class="container">
-  <div class="section-head center reveal"><div class="eyebrow">Founding Team</div><h2>Four Professionals. One Shared Vision.</h2><p class="lead">A multidisciplinary founding team with complementary knowledge across business, accounting, taxation and compliance.</p></div>
-  <div class="team">
-    <article class="person reveal"><div class="avatar"><img src="Ashish Bisht.jpeg" alt="Ashish Bisht, Founder"></div><h3>Ashish Bisht</h3><div class="role">Founder · MBA</div><p>Business and management perspective focused on client requirements and structured professional solutions.</p></article>
-    <article class="person reveal"><div class="avatar"><img src="Rishabh Bisht.jpeg" alt="Rishabh Bisht, Founder"></div><h3>Rishabh Bisht</h3><div class="role">Founder · B.Com</div><p>Commerce and accounting foundation with a focus on organised financial records and compliance.</p></article>
-    <article class="person reveal"><div class="avatar"><img src="Harvinder.jpeg" alt="Harvinder, Founder"></div><h3>Harvinder</h3><div class="role">Founder · ACCA</div><p>Accounting perspective with focus on accounting, financial reporting, audit and compliance.</p></article>
-    <article class="person reveal"><div class="avatar"><img src="Priyanshu.jpeg" alt="Priyanshu, Founder"></div><h3>Priyanshu</h3><div class="role">Founder · MBA</div><p>Business-oriented approach focused on practical compliance solutions and client support.</p></article>
-  </div>
-</div></section>
+<div class="stat">
+<b>95+</b>
+<span>Returns & Filings</span>
+</div>
 
-<section class="testimonials" id="testimonials"><div class="container">
-  <div class="section-head center reveal"><div class="eyebrow">Client Testimonials</div><h2>Trusted by Clients. Valued for Our Service.</h2><p class="lead">Our greatest measure of success is the trust our clients place in us.</p></div>
-  <div class="quote-grid">
-    <article class="quote reveal"><div class="stars">★★★★★</div><blockquote>“AR ASSOCIATE has made our GST and accounting compliance much easier to manage. Their team is professional, responsive and always available when we need guidance.”</blockquote><small>— Business Owner · GST & Accounting Client</small></article>
-    <article class="quote reveal"><div class="stars">★★★★★</div><blockquote>“We have received excellent support for our regular compliance requirements. The team understands our requirements and handles the work in a very organised manner.”</blockquote><small>— Business Client · Tax & Compliance Client</small></article>
-    <article class="quote reveal"><div class="stars">★★★★★</div><blockquote>“What we appreciate most is their attention to detail and timely communication. AR ASSOCIATE has become a reliable professional partner for our business.”</blockquote><small>— Entrepreneur · Accounting & Compliance Client</small></article>
-  </div>
-  <p style="text-align:center;color:#8b7c65;font-size:12px;margin-top:22px">Sample testimonials — replace with genuine client feedback before publishing.</p>
-</div></section>
+<div class="stat">
+<b>55+</b>
+<span>Businesses Supported</span>
+</div>
 
-<section class="contact" id="contact"><div class="container contact-grid">
-  <div class="reveal"><div class="eyebrow">Contact AR ASSOCIATE</div><h2>Let's Discuss Your Requirements.</h2><p class="lead">Share your requirements and our team will get back to you regarding GST, Income Tax, Audit, Accounting, PF & ESI or statutory compliance.</p>
-    <div class="contact-info">
-      <div><span>Email</span><a href="mailto:arassociates042025@gmail.com">arassociates042025@gmail.com</a></div>
-      <div><span>Office</span>RC-152, Prakash Nagar, Khora Colony, Gzb, UP - 201309</div>
-      <div><span>Business Hours</span>Monday – Saturday · 10:00 AM – 6:00 PM</div>
-    </div>
-  </div>
-  <form id="enquiryForm" class="reveal">
-    <div><label>FULL NAME</label><input required type="text" placeholder="Enter your full name"></div>
-    <div><label>EMAIL ADDRESS</label><input required type="email" placeholder="Enter your email"></div>
-    <div><label>MOBILE NUMBER</label><input required type="tel" placeholder="Enter your mobile number"></div>
-    <div><label>SERVICE REQUIRED</label><select required><option value="">Select a service</option><option>GST Registration</option><option>GST Return Filing</option><option>Income Tax / ITR</option><option>Audit</option><option>Accounting & Bookkeeping</option><option>PF & ESI Compliance</option><option>Other Compliance</option></select></div>
-    <div class="full"><label>YOUR REQUIREMENT</label><textarea placeholder="Tell us briefly about your requirement"></textarea></div>
-    <div class="full"><button class="btn btn-gold" type="submit">Submit Enquiry</button></div>
-  </form>
-</div></section>
+</div>
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-grid reveal">
+
+<div>
+
+<div class="eyebrow">About AR ASSOCIATE</div>
+
+<h2>Simplifying Tax & Compliance for Your Business</h2>
+
+<p class="lead">
+AR ASSOCIATE is a professional tax, accounting and compliance firm providing
+comprehensive services in GST, Income Tax, Audit, Accounting, PF & ESI compliance.
+</p>
+
+<p style="margin-top:20px;color:#69737a">
+We support individuals and businesses with accurate, timely and practical solutions
+designed to simplify their statutory and financial responsibilities. From GST
+registration and return filing to ITR, audit, accounting, PF and ESI compliance,
+our team helps you stay organised and compliant — so you can focus on what matters most:
+your business.
+</p>
+
+<div style="margin-top:28px">
+<a class="btn btn-gold" style="color:#071522" href="#services">
+Know More About Us
+</a>
+</div>
+
+</div>
+
+<div class="about-card">
+
+<div class="eyebrow">Our Commitment</div>
+
+<h3>
+Professional expertise. Reliable service. Long-term trust.
+</h3>
+
+<p>
+We aim to become a dependable professional partner for every client by combining
+attention to detail, structured processes and personalised support.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-head center reveal">
+
+<div class="eyebrow">Our Services</div>
+
+<h2>Complete Tax, Accounting & Compliance Solutions</h2>
+
+<p class="lead">
+Professional and dependable support for your essential financial and statutory requirements.
+</p>
+
+</div>
+
+<div class="cards">
+
+<article class="card reveal">
+<div class="num">01</div>
+<h3>GST Services</h3>
+<p>GST Registration, return filing, compliance, documentation and advisory support.</p>
+<a href="#contact">Enquire Now →</a>
+</article>
+
+<article class="card reveal">
+<div class="num">02</div>
+<h3>Income Tax</h3>
+<p>ITR filing, tax computation, tax compliance and professional assistance.</p>
+<a href="#contact">Enquire Now →</a>
+</article>
+
+<article class="card reveal">
+<div class="num">03</div>
+<h3>Audit Services</h3>
+<p>Audit, financial review, documentation and compliance support.</p>
+<a href="#contact">Enquire Now →</a>
+</article>
+
+<article class="card reveal">
+<div class="num">04</div>
+<h3>Accounting</h3>
+<p>Bookkeeping, accounts maintenance, reconciliation and financial reporting.</p>
+<a href="#contact">Enquire Now →</a>
+</article>
+
+<article class="card reveal">
+<div class="num">05</div>
+<h3>PF & ESI</h3>
+<p>Registration and ongoing employee-related statutory compliance support.</p>
+<a href="#contact">Enquire Now →</a>
+</article>
+
+<article class="card reveal">
+<div class="num">06</div>
+<h3>Compliance</h3>
+<p>End-to-end support for recurring tax, accounting and statutory obligations.</p>
+<a href="#contact">Enquire Now →</a>
+</article>
+
+</div>
+</div>
+
+</section>
+
+<!-- WHY CHOOSE -->
+
+<section class="dark">
+
+<div class="container reveal">
+
+<div class="section-head">
+
+<div class="eyebrow">Why Choose AR ASSOCIATE?</div>
+
+<h2>Expertise You Can Rely On. Service You Can Trust.</h2>
+
+<p class="lead">
+We combine professional knowledge with a personalised approach to make your
+compliance journey simpler, more organised and more reliable.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why">
+<b>01 · Professional Expertise</b>
+<p>Professional support across taxation, GST, accounting, audit and statutory compliance.</p>
+</div>
+
+<div class="why">
+<b>02 · Accuracy & Attention to Detail</b>
+<p>Careful focus on accurate records, documentation and compliance work.</p>
+</div>
+
+<div class="why">
+<b>03 · Timely Compliance</b>
+<p>A structured approach designed to help you stay organised and meet important deadlines.</p>
+</div>
+
+<div class="why">
+<b>04 · Personalised Solutions</b>
+<p>Solutions aligned with your specific requirements and business needs.</p>
+</div>
+
+<div class="why">
+<b>05 · Complete Compliance Support</b>
+<p>GST, Income Tax, accounting, audit, PF and ESI under one professional roof.</p>
+</div>
+
+<div class="why">
+<b>06 · Confidential & Reliable</b>
+<p>Your financial and business information is handled with professionalism and discretion.</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- APPROACH -->
+
+<section id="approach">
+
+<div class="container">
+
+<div class="section-head center reveal">
+
+<div class="eyebrow">Our Professional Approach</div>
+
+<h2>A Structured Approach to Every Client</h2>
+
+<p class="lead">
+Our process is built around clarity, accuracy, timely action and long-term professional relationships.
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="step reveal">
+<strong>01</strong>
+<h3>Understand</h3>
+<p>We understand your business, financial position and specific compliance requirements.</p>
+</div>
+
+<div class="step reveal">
+<strong>02</strong>
+<h3>Analyse</h3>
+<p>We review relevant information and documentation to identify requirements and potential issues.</p>
+</div>
+
+<div class="step reveal">
+<strong>03</strong>
+<h3>Plan</h3>
+<p>We establish a clear and organised approach for the work involved.</p>
+</div>
+
+<div class="step reveal">
+<strong>04</strong>
+<h3>Execute</h3>
+<p>We handle required accounting, documentation and filing processes with attention to detail.</p>
+</div>
+
+<div class="step reveal">
+<strong>05</strong>
+<h3>Review</h3>
+<p>We review relevant information and documentation to maintain accuracy and consistency.</p>
+</div>
+
+<div class="step reveal">
+<strong>06</strong>
+<h3>Support</h3>
+<p>We remain available for ongoing professional support beyond a single filing or compliance activity.</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- FOUNDING TEAM -->
+
+<section id="team" class="services">
+
+<div class="container">
+
+<div class="section-head center reveal">
+
+<div class="eyebrow">Founding Team</div>
+
+<h2>Four Professionals. One Shared Vision.</h2>
+
+<p class="lead">
+A multidisciplinary founding team with complementary knowledge across business,
+accounting, taxation and compliance.
+</p>
+
+</div>
+
+<div class="team">
+
+<!-- ASHISH -->
+
+<article class="person reveal">
+
+<div class="avatar">
+<img src="Ashish.jpeg" alt="Ashish Bisht, Founder">
+</div>
+
+<h3>Ashish Bisht</h3>
+
+<div class="role">Founder · MBA</div>
+
+<p>
+Business and management perspective focused on client requirements and structured
+professional solutions.
+</p>
+
+</article>
+
+<!-- RISHABH -->
+
+<article class="person reveal">
+
+<div class="avatar">
+<img src="Rishabh.jpeg" alt="Rishabh Bisht, Founder">
+</div>
+
+<h3>Rishabh Bisht</h3>
+
+<div class="role">Founder · B.Com</div>
+
+<p>
+Commerce and accounting foundation with a focus on organised financial records
+and compliance.
+</p>
+
+</article>
+
+<!-- HARVINDER -->
+
+<article class="person reveal">
+
+<div class="avatar">
+<img src="Harvinder.jpeg" alt="Harvinder, Founder">
+</div>
+
+<h3>Harvinder</h3>
+
+<div class="role">Founder · ACCA</div>
+
+<p>
+Accounting perspective with focus on accounting, financial reporting,
+audit and compliance.
+</p>
+
+</article>
+
+<!-- PRIYANSHU -->
+
+<article class="person reveal">
+
+<div class="avatar">
+<img src="Priyanshu.jpeg" alt="Priyanshu, Founder">
+</div>
+
+<h3>Priyanshu</h3>
+
+<div class="role">Founder · MBA</div>
+
+<p>
+Business-oriented approach focused on practical compliance solutions
+and client support.
+</p>
+
+</article>
+
+</div>
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials" id="testimonials">
+
+<div class="container">
+
+<div class="section-head center reveal">
+
+<div class="eyebrow">Client Testimonials</div>
+
+<h2>Trusted by Clients. Valued for Our Service.</h2>
+
+<p class="lead">
+Our greatest measure of success is the trust our clients place in us.
+</p>
+
+</div>
+
+<div class="quote-grid">
+
+<article class="quote reveal">
+<div class="stars">★★★★★</div>
+
+<blockquote>
+“AR ASSOCIATE has made our GST and accounting compliance much easier to manage.
+Their team is professional, responsive and always available when we need guidance.”
+</blockquote>
+
+<small>— Business Owner · GST & Accounting Client</small>
+</article>
+
+<article class="quote reveal">
+<div class="stars">★★★★★</div>
+
+<blockquote>
+“We have received excellent support for our regular compliance requirements.
+The team understands our requirements and handles the work in a very organised manner.”
+</blockquote>
+
+<small>— Business Client · Tax & Compliance Client</small>
+</article>
+
+<article class="quote reveal">
+<div class="stars">★★★★★</div>
+
+<blockquote>
+“What we appreciate most is their attention to detail and timely communication.
+AR ASSOCIATE has become a reliable professional partner for our business.”
+</blockquote>
+
+<small>— Entrepreneur · Accounting & Compliance Client</small>
+</article>
+
+</div>
+
+<p style="text-align:center;color:#8b7c65;font-size:12px;margin-top:22px">
+Sample testimonials — replace with genuine client feedback before publishing.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div class="reveal">
+
+<div class="eyebrow">Contact AR ASSOCIATE</div>
+
+<h2>Let's Discuss Your Requirements.</h2>
+
+<p class="lead">
+Share your requirements and our team will get back to you regarding GST,
+Income Tax, Audit, Accounting, PF & ESI or statutory compliance.
+</p>
+
+<div class="contact-info">
+
+<div>
+<span>Email</span>
+<a href="mailto:arassociates042025@gmail.com">
+arassociates042025@gmail.com
+</a>
+</div>
+
+<div>
+<span>Office</span>
+RC-152, Prakash Nagar, Khora Colony, Gzb, UP - 201309
+</div>
+
+<div>
+<span>Business Hours</span>
+Monday – Saturday · 10:00 AM – 6:00 PM
+</div>
+
+</div>
+</div>
+
+<form id="enquiryForm" class="reveal">
+
+<div>
+<label>FULL NAME</label>
+<input required type="text" placeholder="Enter your full name">
+</div>
+
+<div>
+<label>EMAIL ADDRESS</label>
+<input required type="email" placeholder="Enter your email">
+</div>
+
+<div>
+<label>MOBILE NUMBER</label>
+<input required type="tel" placeholder="Enter your mobile number">
+</div>
+
+<div>
+<label>SERVICE REQUIRED</label>
+
+<select required>
+<option value="">Select a service</option>
+<option>GST Registration</option>
+<option>GST Return Filing</option>
+<option>Income Tax / ITR</option>
+<option>Audit</option>
+<option>Accounting & Bookkeeping</option>
+<option>PF & ESI Compliance</option>
+<option>Other Compliance</option>
+</select>
+
+</div>
+
+<div class="full">
+
+<label>YOUR REQUIREMENT</label>
+
+<textarea placeholder="Tell us briefly about your requirement"></textarea>
+
+</div>
+
+<div class="full">
+
+<button class="btn btn-gold" type="submit">
+Submit Enquiry
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
 </main>
 
+<!-- FOOTER -->
+
 <footer>
+
 <div class="container">
-  <div class="footer-grid">
-    <div><div class="footer-title">AR ASSOCIATE</div><p>Tax · GST · Accounting · Audit · PF & ESI · Compliance</p><p style="margin-top:15px">Professional expertise. Reliable service. Long-term trust.</p></div>
-    <div><div class="footer-title">Quick Links</div><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#approach">Our Approach</a><a href="#team">Founding Team</a><a href="#contact">Contact</a></div>
-    <div><div class="footer-title">Services</div><a href="#services">GST Registration</a><a href="#services">GST Return Filing</a><a href="#services">Income Tax & ITR</a><a href="#services">Audit</a><a href="#services">Accounting</a><a href="#services">PF & ESI</a></div>
-    <div><div class="footer-title">Contact</div><p><a href="mailto:arassociates042025@gmail.com">arassociates042025@gmail.com</a></p><p style="margin-top:10px">RC-152, Prakash Nagar, Khora Colony,<br>Gzb, UP - 201309</p><p style="margin-top:10px">Mon – Sat · 10:00 AM – 6:00 PM</p></div>
-  </div>
-  <div class="copyright"><span>© 2026 AR ASSOCIATE. All Rights Reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms & Conditions</a> · <a href="#">Disclaimer</a></span></div>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-title">AR ASSOCIATE</div>
+
+<p>Tax · GST · Accounting · Audit · PF & ESI · Compliance</p>
+
+<p style="margin-top:15px">
+Professional expertise. Reliable service. Long-term trust.
+</p>
+
 </div>
+
+<div>
+
+<div class="footer-title">Quick Links</div>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#approach">Our Approach</a>
+<a href="#team">Founding Team</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">Services</div>
+
+<a href="#services">GST Registration</a>
+<a href="#services">GST Return Filing</a>
+<a href="#services">Income Tax & ITR</a>
+<a href="#services">Audit</a>
+<a href="#services">Accounting</a>
+<a href="#services">PF & ESI</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">Contact</div>
+
+<p>
+<a href="mailto:arassociates042025@gmail.com">
+arassociates042025@gmail.com
+</a>
+</p>
+
+<p style="margin-top:10px">
+RC-152, Prakash Nagar, Khora Colony,<br>
+Gzb, UP - 201309
+</p>
+
+<p style="margin-top:10px">
+Mon – Sat · 10:00 AM – 6:00 PM
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+<span>
+© 2026 AR ASSOCIATE. All Rights Reserved.
+</span>
+
+<span>
+<a href="#">Privacy Policy</a> ·
+<a href="#">Terms & Conditions</a> ·
+<a href="#">Disclaimer</a>
+</span>
+
+</div>
+
+</div>
+
 </footer>
 
 <script>
+
 function toggleMenu(){
-  const nav=document.querySelector('.nav-links');
-  nav.style.display=nav.style.display==='flex'?'none':'flex';
-  nav.style.position='absolute';nav.style.top='78px';nav.style.left='0';nav.style.right='0';
-  nav.style.background='#071522';nav.style.padding='22px';nav.style.flexDirection='column';nav.style.alignItems='flex-start';
+
+const nav=document.querySelector('.nav-links');
+
+nav.style.display=
+nav.style.display==='flex'?'none':'flex';
+
+nav.style.position='absolute';
+nav.style.top='78px';
+nav.style.left='0';
+nav.style.right='0';
+nav.style.background='#071522';
+nav.style.padding='22px';
+nav.style.flexDirection='column';
+nav.style.alignItems='flex-start';
+
 }
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.getElementById('enquiryForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  alert('Thank you. Your enquiry form is ready to be connected to your business email.');
+
+const observer=new IntersectionObserver(
+entries=>entries.forEach(e=>{
+if(e.isIntersecting)
+e.target.classList.add('show')
+}),
+{threshold:.12}
+);
+
+document.querySelectorAll('.reveal')
+.forEach(el=>observer.observe(el));
+
+document.getElementById('enquiryForm')
+.addEventListener('submit',e=>{
+
+e.preventDefault();
+
+alert(
+'Thank you. Your enquiry form is ready to be connected to your business email.'
+);
+
 });
+
 </script>
+
 </body>
 </html>
